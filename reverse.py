@@ -3,9 +3,21 @@
 
 # Write a recursive function called `reverse` that accepts a ss and returns a reversed ss.
 
-def reverse(ss):
+word ="cat"
+
+def reverse(string, result=""):
     # Write code here
-    pass
+    string1 = list(string)
+    print(string1)
+    last_str = string1.pop()
+    result = result + last_str
+    print('hello {}'.format(result))
+    if len(string1) == 0:
+        return result
+    return reverse("".join(string1), result)
+
+print(reverse(word))
+
 
 # print(reverse("")) 
 # => ""
@@ -17,3 +29,4 @@ def reverse(ss):
 # => "retupmoc"
 # print(reverse(reverse("computer"))) 
 # => "computer"
+
